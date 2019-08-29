@@ -1,0 +1,35 @@
+
+.color-picker{
+  width: 99% !important;
+  background-color: #fff;
+  &>div:first-child{
+    span{
+      display: block;
+      &>div{
+        width: 20px!important;
+        height: 20px!important;
+      }
+    }
+  }
+}
+
+.hold-block{
+  height: 30px;
+  width: 100%;
+}
+
+.show-main{
+  margin: 0 auto 30px;
+  width: 375px;
+}
+
+.drag-table {
+  :global{
+    tr.drop-over-downward td {
+      border-bottom: 2px dashed #1890ff;
+    }
+    tr.drop-over-upward td {
+      border-top: 2px dashed #1890ff;
+    }
+  }
+}

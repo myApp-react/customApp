@@ -1,0 +1,161 @@
+
+.swiper{
+  position: relative;
+  width: 100%;
+  //height: 200px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #fff;
+  &:hover .cover{
+    opacity: 1;
+    z-index: 99;
+    transition: .3s ease-in-out;
+  }
+}
+.swiper-circle{
+
+}
+.swiper-main{
+  position: relative;
+  width: 100%;
+  padding-bottom: 53.33%;
+}
+.swiper-main-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.7);
+  opacity: 0;
+  z-index: -1;
+  transition: .3s ease-in-out;
+}
+.cover-mask{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  &:after{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+  }
+  .cover-mask-item{
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.gird{
+  position: relative;
+  width: 100%;
+  background-color: #ffd8bb;
+  &:hover .cover{
+    opacity: 1;
+    z-index: 99;
+    transition: .3s ease-in-out;
+  }
+  :global{
+    .sub-title {
+      color: #888;
+      font-size: 14px;
+      padding: 15px 0 9px 15px;
+    }
+    .not-square-grid .am-grid-icon {
+      width: 40px;
+      height: 60px;
+    }
+  }
+}
+.brand{
+  position: relative;
+  width: 100%;
+  &:hover .cover{
+    opacity: 1;
+    z-index: 99;
+    transition: .3s ease-in-out;
+  }
+}
+.title{
+  position: relative;
+  width: 100%;
+  height: 30px;
+  &:hover .cover{
+    opacity: 1;
+    z-index: 99;
+    transition: .3s ease-in-out;
+  }
+}
+.activity{
+  position: relative;
+  width: 100%;
+  background-color: #ddd;
+  &:hover .cover{
+    opacity: 1;
+    z-index: 99;
+    transition: .3s ease-in-out;
+  }
+  .item-warp{
+    width: 100%;
+    padding: 10px 15px 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    li{
+      padding-top: 15px;
+      border-top: 1px solid #E1E3E6;
+      &:first-child{
+        padding: 0;
+        border: none;
+      }
+    }
+    .item-img{
+      width: 100%;
+      height:120px;
+      img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .item-label{
+      padding: 10px 0;
+      font-size: 15px;
+    }
+    .item-label-text{
+      line-height: 1.5;
+    }
+  }
+}
+.mall{
+  position: relative;
+  width: 100%;
+  &:hover .cover{
+    opacity: 1;
+    z-index: 99;
+    transition: .3s ease-in-out;
+  }
+}
+.navbar{
+  position: relative;
+  width: 100%;
+  height: 55px;
+  background-color: #fff;
+  &:hover .cover{
+    opacity: 1;
+    z-index: 999;
+    transition: .3s ease-in-out;
+  }
+}
+
+
+

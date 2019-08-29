@@ -1,0 +1,25 @@
+
+.normal {
+  margin: 30px 0 0 30px;
+  width: 680px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  :global {
+    .ant-spin-nested-loading{
+      flex: 1;
+    }
+    .ant-spin-container{
+      height: 100%;
+      &>div{
+        min-height: 450px;
+      }
+    }
+    .ant-back-top{
+      right: unset;
+      left: 700px;
+    }
+  }
+}
+
+

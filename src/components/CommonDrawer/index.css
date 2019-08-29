@@ -1,0 +1,17 @@
+.hold-block{
+  height: 30px;
+  width: 100%;
+}
+
+.show-main{
+  margin: 0 auto 30px;
+  width: 375px;
+}
+
+.drag-table tr.drop-over-downward td {
+  border-bottom: 2px dashed #1890ff;
+}
+
+.drag-table tr.drop-over-upward td {
+  border-top: 2px dashed #1890ff;
+}
