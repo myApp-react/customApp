@@ -2,8 +2,8 @@ import React, { Component, PureComponent, Fragment } from "react";
 import { Grid, Carousel } from 'antd-mobile';
 import style from './index.less'
 import shortid from 'shortid';
-import { Prefix } from '@/utils/config'
-import Ellipsis from 'ant-design-pro/lib/Ellipsis';
+import { Prefix } from '@/utils/config';
+import Swiper from 'react-id-swiper';
 import isEqual from "react-fast-compare";
 const data = Array.from(new Array(8)).map((_val, i) => ({
   Id: shortid.generate(),
@@ -29,6 +29,11 @@ class Brand extends Component {
       if(commonUrl && el.ShopPromotionId){
         window.location.href = `${BranddetailUrl}/${el.ShopPromotionId}`
       }
+    }
+
+    const params = {
+      slidesPerView: 2.2,
+      spaceBetween: 0,
     }
 
     return (
@@ -61,6 +66,59 @@ class Brand extends Component {
             }}
           /> : null
         }
+
+        {/*{*/}
+          {/*IsIcon === 2 ? //frameOverflow="visible"*/}
+            {/*<div className={style['brand-show-type-3']}>*/}
+              {/*<Swiper {...params} >*/}
+                {/*{ ShopPro && ShopPro.length !== 0 ?*/}
+                  {/*ShopPro.map((_, index) => (*/}
+                    {/*<a*/}
+                      {/*key={_.Id}*/}
+                      {/*className={style['card-item-warp']}*/}
+                      {/*href={renderUrl(_.ShopPromotionId)}*/}
+                      {/*style={{*/}
+                        {/*display: 'block',*/}
+                        {/*position: 'relative',*/}
+                        {/*paddingLeft: 10,*/}
+                      {/*}}*/}
+                    {/*>*/}
+                      {/*<div*/}
+                        {/*className={style['card-item']}*/}
+                        {/*style={{*/}
+                          {/*background: LogoColor || '#F0F2F5'*/}
+                        {/*}}*/}
+                      {/*>*/}
+                        {/*<div className={style['store-img']}><img src={ImgUrl(_.LogoUrl)} alt=""/></div>*/}
+                        {/*<div className={style['store-info']}>*/}
+                          {/*<h3 className={style.title} style={{WebkitBoxOrient: 'vertical'}}>{_.StoreName}</h3>*/}
+                          {/*<div className={style.describe} style={{WebkitBoxOrient: 'vertical'}}>{_.Describe}</div>*/}
+                        {/*</div>*/}
+                      {/*</div>*/}
+                    {/*</a>*/}
+                  {/*)) : data.map((_, index) => (*/}
+                    {/*<div className="swiper-slide" key={index}>*/}
+                      {/*<a*/}
+                        {/*className={style['card-item-warp']}*/}
+                        {/*style={{*/}
+                          {/*display: 'block',*/}
+                          {/*position: 'relative',*/}
+                          {/*background: LogoColor || '#F0F2F5'*/}
+                        {/*}}*/}
+                      {/*>*/}
+                        {/*<div className={style['card-item']}>*/}
+                          {/*<div className={style['store-img']}><img src={_.icon} alt=""/></div>*/}
+                          {/*<div className={style['store-info']}>*/}
+                            {/*<h3 className={style.title}>我是标题文字</h3>*/}
+                            {/*<p className={style.describe}>这里放置的是一段描述性文字</p>*/}
+                          {/*</div>*/}
+                        {/*</div>*/}
+                      {/*</a>*/}
+                    {/*</div>*/}
+                  {/*))}*/}
+              {/*</Swiper>*/}
+            {/*</div> : null*/}
+        {/*}*/}
         {
           IsIcon === 2 ? //frameOverflow="visible"
             <Carousel

@@ -125,7 +125,7 @@ class Pageslist extends PureComponent {
       handleCancel: this.handleCancel,
       handleRefresh,
     }
-
+    console.log("预览地址：", previewUrl)
     return (
       <Page inner>
         <div className={style['add-btn-warp']}>

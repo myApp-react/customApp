@@ -18,6 +18,9 @@ export default {
     android: 5,
   },
   plugins: [
+    ['@alitajs/umi-plugin-deploy-config', {
+      previewUrl1: 'https://api.***.com'
+    }],
     // ref: https://umijs.org/plugin/umi-plugin-react.html
     ['umi-plugin-react', {
       antd: true,
@@ -44,10 +47,12 @@ export default {
           /components\//,
         ],
       },
-      // scripts: [
-      //   { src: 'https://cdn.jsdelivr.net/npm/eruda@1.5.4/eruda.min.js' },
-      //
-      // ],
+      scripts: [
+        // { src: 'https://cdn.jsdelivr.net/npm/eruda@1.5.4/eruda.min.js' },
+        {
+          content: `window.previewUrl = "http://ydhtest.fetower.com/build/#/wxPreview"`
+        }
+      ],
     }],
   ],
   extraPostCSSPlugins: [

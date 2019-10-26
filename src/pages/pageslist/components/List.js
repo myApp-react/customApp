@@ -56,6 +56,8 @@ class List extends Component {
       visible: !pre.visible,
       confirmLoading: !pre.confirmLoading,
     }))
+
+
   }
 
   shouldComponentUpdate(preProps, preState) {
@@ -80,9 +82,10 @@ class List extends Component {
   render() {
     const { visible, editInfo } = this.state;
     const { currentItemId, dispatch, handleRefresh, confirmLoading, ...tableProps } = this.props;
+    console.log("预览地址：", previewUrl)
     const showCode = (
       <div>
-        <QRCode size={145} value={`http://ydhtest.fetower.com/build/#/wxPreview`} />
+        <QRCode size={145} value={previewUrl} />
       </div>
     )
 

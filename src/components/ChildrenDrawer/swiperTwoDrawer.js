@@ -170,7 +170,7 @@ class SwiperTwoDrawer extends Component {
           <Form.Item label="排序编号">
             {getFieldDecorator('OrderNo', {
               rules: [{ required: true, message: '请输入编号!' }],
-              initialValue: Index ? Index : (orderNum || 1) })(<InputNumber disabled={true} min={Index ? Index : (orderNum || 1)} max={10} />)}
+              initialValue: Index ? Index : (orderNum || 1) })(<InputNumber disabled={true} min={Index ? Index : (orderNum || 1)} />)}
           </Form.Item>
           <Form.Item label="滚屏标题" hasFeedback>
             {getFieldDecorator('Title', {

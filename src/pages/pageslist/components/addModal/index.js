@@ -48,13 +48,16 @@ class AddModal extends PureComponent {
           onOk={this.handleSubmit}
           confirmLoading={confirmLoading}
           onCancel={handleCancel}
+          style={{
+            minWidth: 400
+          }}
         >
           <Form layout="inline" className={styles.form} onSubmit={this.handleSubmit} hideRequiredMark >
             <Form.Item label="配置名称">
               {getFieldDecorator('ConfigName', {
                 rules: [{ required: true, message: '请输入配置名称' }],
                 initialValue: editInfo && editInfo.ConfigName
-              })(<Input placeholder="请输入配置名称" allowClear style={{ width: 286}}/>)}
+              })(<Input placeholder="请输入配置名称" allowClear style={{ minWidth: 286}}/>)}
             </Form.Item>
           </Form>
         </Modal>
